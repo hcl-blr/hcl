@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Forms API</title>
+    <script>
+        function changeHandler(target,source){
+            document.getElementById(target).innerHTML = document.getElementById(source).value;
+        }
+        function outputHandler(target,source){
+            document.getElementById(target).value = document.getElementById(source).value;
+        }
+    </script>
+</head>
+<body>
+    <table>
+        <tr>
+            <td>Text</td>
+            <td>
+                <input type="text">
+            </td>
+        </tr>
+        <tr>
+            <td>Search</td>
+            <td>
+                <input type="search">
+            </td>
+        </tr>
+        <tr>
+            <td>Color</td>
+            <td>
+                <input id="col" type="color" onchange="changeHandler('colDisplay','col')">
+                <span id="colDisplay"></span>
+            </td>
+        </tr>
+        <tr>
+            <td>Number</td>
+            <td>
+                <input id="num" type="number" min="18" max="70" onchange="changeHandler('numDisplay','num')">
+                <span id="numDisplay"></span>
+            </td>
+        </tr>
+        <tr>
+            <td>Time</td>
+            <td>
+                <input id="tme" type="time" onchange="changeHandler('tmeDisplay','tme')">
+                <span id="tmeDisplay"></span>
+            </td>
+        </tr>
+        <tr>
+            <td>Range</td>
+            <td>
+                <input id="rng" min="5" max="50" step="5" type="range" onchange="changeHandler('rngDisplay','rng')">
+                <span id="rngDisplay"></span>
+            </td>
+        </tr>
+        <tr>
+            <td>Output / Progress</td>
+            <td>
+                <input id="prog" min="0" max="1" step="0.01" type="range" onchange="outputHandler('progDisplay','prog')">
+                <progress id="progDisplay" value="0.5"></progress>
+            </td>
+        </tr>
+        <tr>
+            <td>Output / Meter</td>
+            <td>
+                <meter low="0.4" high="0.6" optimum="0.3" value="0.7"></meter>
+            </td>
+        </tr>
+    </table>
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Web Storage</title>
+    <script>
+    function storeHandler(){
+        window.localStorage.uname = document.getElementById("un").value;
+        window.localStorage.uage = document.getElementById("ua").value;
+        window.localStorage.uemail = document.getElementById("ue").value;
+        //-----------------------------------------------
+    }
+    function getHandler(){
+        alert("User Name : "+window.localStorage.uname+"\n User Age : "+window.localStorage.uage+"\n User eMail : "+window.localStorage.uemail)
+    }
+    </script>
+</head>
+<body>
+    <table>
+        <tr>
+            <td>User Name</td>
+            <td>
+                <input type="text" id="un">
+            </td>
+        </tr>
+        <tr>
+            <td>User age</td>
+            <td>
+                <input type="text" id="ua">
+            </td>
+        </tr>
+        <tr>
+            <td>User email</td>
+            <td>
+                <input type="text" id="ue">
+            </td>
+        </tr>
+        <tr>
+            <td>&nbsp;</td>
+            <td>
+                <button onclick="storeHandler()">Store Data</button>
+            </td>
+        </tr>
+    </table>
+    <button onclick="getHandler()">Get User Info</button>
+</body>
+</html>

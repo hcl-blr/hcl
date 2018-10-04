@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Web Storage</title>
+    <script>
+    window.addEventListener("storage",storageFun);
+    var count = localStorage.length;
+
+    function storeHandler(){
+        var user = {
+            name : document.getElementById("un").value,
+            age : document.getElementById("ua").value,
+            email : document.getElementById("ue").value
+        }
+        localStorage.setItem('user'+count, JSON.stringify(user));
+        count++;
+        //-----------------------------------------------
+    };
+    function getHandler(){
+        alert("User Name : "+localStorage.length);
+        // alert(localStorage.getItem('user').length)
+    };
+    function storageFun(event){
+        console.log("storage accessed")
+    }
+    
+    </script>
+</head>
+<body>
+    <table>
+        <tr>
+            <td>User Name</td>
+            <td>
+                <input type="text" id="un">
+            </td>
+        </tr>
+        <tr>
+            <td>User age</td>
+            <td>
+                <input type="text" id="ua">
+            </td>
+        </tr>
+        <tr>
+            <td>User email</td>
+            <td>
+                <input type="text" id="ue">
+            </td>
+        </tr>
+        <tr>
+            <td>&nbsp;</td>
+            <td>
+                <button onclick="storeHandler()">Store Data</button>
+            </td>
+        </tr>
+    </table>
+    <button onclick="getHandler()">Get storage item </button>
+    
+    <hr>
+    <div class="container"></div>
+</body>
+</html>

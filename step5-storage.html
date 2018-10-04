@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Web Storage</title>
+    <script>
+    function storeHandler(){
+        localStorage.uname = document.getElementById("un").value;
+        localStorage.uage = document.getElementById("ua").value;
+        localStorage.uemail = document.getElementById("ue").value;
+        //-----------------------------------------------
+    }
+    function getHandler(){
+        alert("User Name : "+localStorage.uname+"\n User Age : "+localStorage.uage+"\n User eMail : "+localStorage.uemail)
+    }
+    function getFirstKeyValue(){
+        alert("First Key Value : "+localStorage.getItem(localStorage.key(0)))
+    }
+    function getTotalItems(){
+        alert("First Key Value : "+localStorage.length);
+    }
+    function listAllItems(){
+        for(var i = 0; i < localStorage.length ; i++){
+            var keyname = localStorage.key(i);
+            var val = localStorage.getItem(localStorage.key(0));
+            document.getElementsByClassName("container")[0].innerHTML += "<li> Key Name : "+keyname+" | value : "+val+"</li>"
+        }
+    }
+    </script>
+</head>
+<body>
+    <table>
+        <tr>
+            <td>User Name</td>
+            <td>
+                <input type="text" id="un">
+            </td>
+        </tr>
+        <tr>
+            <td>User age</td>
+            <td>
+                <input type="text" id="ua">
+            </td>
+        </tr>
+        <tr>
+            <td>User email</td>
+            <td>
+                <input type="text" id="ue">
+            </td>
+        </tr>
+        <tr>
+            <td>&nbsp;</td>
+            <td>
+                <button onclick="storeHandler()">Store Data</button>
+            </td>
+        </tr>
+    </table>
+    <button onclick="getHandler()">Get User Info</button>
+    <button onclick="getFirstKeyValue()">Get First Key Value</button>
+    <button onclick="getTotalItems()">Total Storage Length</button>
+    <button onclick="listAllItems()">List All Items</button>
+    <hr>
+    <div class="container"></div>
+</body>
+</html>

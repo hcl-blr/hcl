@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>symantics</title>
+    <style>
+        header, nav, main, .box, footer, vijay{
+            border: 2px solid red;
+            width: 600px;
+            margin: 10px auto;
+            display: block;
+        }
+    </style>
+    <script>
+        document.createElement("header");
+        document.createElement("vijay");
+        window.onload = function(){
+            alert(document.getElementsByTagName("header")[0].getAttribute("data-sku"))
+        }
+    </script>
+</head>
+<body>
+    <!--
+        (h1{HCL}+h2{bangalore})+(ul>li{ link item }*5)
+        +h1{welcome to HCL technologies bangalore}>(.box{lorem}*3)
+        +h5{copyrights reserved to HCL technologies bangalore}
+    -->
+    <vijay>vijay text comes here</vijay>
+    <header data-sku="SHIP000021" >
+            <h1>HCL</h1>
+            <h2>Bangalore</h2>
+    </header>
+    <nav>
+        <ul>
+            <li> link item </li>
+            <li> link item </li>
+            <li> link item </li>
+            <li> link item </li>
+            <li> link item </li>
+        </ul>
+    </nav>
+   <main>
+        <h1>  welcome to HCL technologies bangalore </h1>
+            <div>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi aut eum, aliquid cupiditate dolorem sint reiciendis dolorum cum excepturi repellendus eos quia distinctio optio aperiam aliquam veniam eius esse ullam.
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi aut eum, aliquid cupiditate dolorem sint reiciendis dolorum cum excepturi repellendus eos quia distinctio optio aperiam aliquam veniam eius esse ullam.
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi aut eum, aliquid cupiditate dolorem sint reiciendis dolorum cum excepturi repellendus eos quia distinctio optio aperiam aliquam veniam eius esse ullam.
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi aut eum, aliquid cupiditate dolorem sint reiciendis dolorum cum excepturi repellendus eos quia distinctio optio aperiam aliquam veniam eius esse ullam.
+            </div>
+            <div>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi aut eum, aliquid cupiditate dolorem sint reiciendis dolorum cum excepturi repellendus eos quia distinctio optio aperiam aliquam veniam eius esse ullam.
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi aut eum, aliquid cupiditate dolorem sint reiciendis dolorum cum excepturi repellendus eos quia distinctio optio aperiam aliquam veniam eius esse ullam.
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi aut eum, aliquid cupiditate dolorem sint reiciendis dolorum cum excepturi repellendus eos quia distinctio optio aperiam aliquam veniam eius esse ullam.
+            </div>
+            <div>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi aut eum, aliquid cupiditate dolorem sint reiciendis dolorum cum excepturi repellendus eos quia distinctio optio aperiam aliquam veniam eius esse ullam.
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi aut eum, aliquid cupiditate dolorem sint reiciendis dolorum cum excepturi repellendus eos quia distinctio optio aperiam aliquam veniam eius esse ullam.
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi aut eum, aliquid cupiditate dolorem sint reiciendis dolorum cum excepturi repellendus eos quia distinctio optio aperiam aliquam veniam eius esse ullam.
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi aut eum, aliquid cupiditate dolorem sint reiciendis dolorum cum excepturi repellendus eos quia distinctio optio aperiam aliquam veniam eius esse ullam.
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi aut eum, aliquid cupiditate dolorem sint reiciendis dolorum cum excepturi repellendus eos quia distinctio optio aperiam aliquam veniam eius esse ullam.
+            </div>
+    </main>
+   <footer>
+       <h5>copyrights reserved to HCL technologies bangalore</h5>
+    </footer>
+</body>
+</html>
