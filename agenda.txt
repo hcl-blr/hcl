@@ -1,0 +1,98 @@
+DAY 1
+HTML5 
+WHATWG.org
+    symantics
+    Form API
+
+DAY 2
+    localStorage / sessionStorage
+    Validation
+
+DAY 3
+    Geolocation
+CSS3
+css3wg.org
+    Responsive Web Design
+    Media Queries
+
+DAY 4
+    selectors
+    precedence / specificity
+    layouts
+    transform / animation
+
+DAY 5
+    Fonts
+    Box sizing
+    Flex box
+    SASS / SCSS
+sasslang.org
+
+DAY 6 : getbootstrap.com
+Bootstrap 4
+layouts
+contents
+
+DAY 7
+Bootstrap 4
+Components
+utilities
+
+
+DAY 8 : developer.mozilla.org
+ES5
+DOM
+Window
+
+
+DAY 9
+Events
+OOP JS
+Modules
+
+DAY 10
+ES6
+
+
+DAY 11
+TypeScript
+
+DAY 12
+angular.io
+Angular 6
+    Binding
+    Components
+    Pipes
+
+DAY 14
+    Directive
+    communication
+
+DAY 15
+    Service
+    DI
+
+DAY 16
+    Forms / validation
+    template forms / reactive forms
+    
+DAY 17
+    HTTPClient
+
+DAY 18
+    Observables
+
+DAY 19
+    routing
+    
+DAY 20
+    routing
+
+DAY 21
+    ngrx
+
+DAY 22
+Testing
+    Unit Jasmine + Karma
+    End to End Protractor
+Building
