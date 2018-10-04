@@ -18,13 +18,17 @@
         localStorage.setItem('user'+count, JSON.stringify(user));
         count++;
         //-----------------------------------------------
+        document.getElementById("un").value = '';
+        document.getElementById("ua").value = '';
+        document.getElementById("ue").value = '';
     };
     function getHandler(){
         alert("User Name : "+localStorage.length);
         // alert(localStorage.getItem('user').length)
     };
     function storageFun(event){
-        console.log("storage accessed")
+        // console.log("storage accessed", event);
+        if(event)
     }
     
     </script>
