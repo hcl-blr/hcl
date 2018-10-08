@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Geolocation</title>
+    <script>
+        /*
+       // window.onload = init2;
+       window.addEventListener("load", init2);
+       document.addEventListener("DOMContentLoaded", init3);
+        function init1(){
+            console.log("body onload")
+        }
+        function init2(){
+            console.log("window onload")
+        }
+        function init3(){
+            console.log("DOM Content Loaded")
+        }
+        */
+        document.addEventListener("DOMContentLoaded", function(){
+            if(navigator.geolocation){
+               document.getElementsByTagName("h1")[0].innerHTML = "Geo location is supported";
+               navigator.geolocation.getCurrentPosition(successfun, errorfun)
+            }else{
+                /*
+                var scripttag = document.createElement("script");
+                    scripttag.setAttribute("src","external.js");
+                    document.head.appendChild(scripttag);
+                */
+                alert("upgrade your browser")
+            }
+        });
+
+        function successfun(position){
+            console.log("Longitude : "+position.coords.longitude, " | Latitude : "+position.coords.latitude)
+            document.getElementsByTagName("img")[0].src = "https://maps.googleapis.com/maps/api/staticmap?center="+position.coords.latitude+","+position.coords.longitude+"&zoom=18&markers=color:blue|label:V|"+position.coords.latitude+","+position.coords.longitude+"&size=400x400";
+            /*
+            position.coords.altitude
+            position.coords.accuracy
+            position.coords.heading
+            position.coords.speed
+            */
+        }
+        function errorfun(error){
+            console.log(error)
+        }
+    </script>
+</head>
+<!-- body onload="init1()" -->
+<body>
+    <h1></h1>
+    <img src="" />
+    <p>
+            https://maps.googleapis.com/maps/api/staticmap?center=Brooklyn+Bridge,New+York,NY&zoom=13&size=600x300&maptype=roadmap&markers=color:blue%7Clabel:S%7C40.702147,-74.015794&markers=color:green%7Clabel:G%7C40.711614,-74.012318s&markers=color:red%7Clabel:C%7C40.718217,-73.998284&key=YOUR_API_KEY
+    </p>
+    <p>
+            https://maps.googleapis.com/maps/api/staticmap?center=Berkeley,CA&zoom=14&size=400x400
+    
+            
+        </p>
+</body>
+</html>
